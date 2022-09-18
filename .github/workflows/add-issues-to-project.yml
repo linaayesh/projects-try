@@ -12,3 +12,9 @@ jobs:
         with:
           project-url: https://github.com/users/linaayesh/projects/3
           github-token: ${{ secrets.AUTO_PROJECT }}
+      - uses: Renato66/auto-label@v2
+        with:
+          repo-token: ${{ secrets.LABEL }}
+          ignore-comments: true
+          labels-not-allowed: '["good first issue"]'
+          default-labels: '["help wanted"]'
